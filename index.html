@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather">
+        <form class="search-form" id = "search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a City"
+                id="searched-city"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="search"  class="form-control button" />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <ul>
+          <li id = "current-date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="sun-icon"
+                class="weather-icon float-left"
+              />
+              <div class="float-left">
+                <span class="temp" id="temperature">23</span> <span class="unit">℃</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind:<span id="wind"></span> kmph</li>
+            </ul>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="days">Wed</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                alt="Wed"
+                class="weather-img"
+              />
+              <div class="degree">25</div>
+            </div>
+            <div class="col">
+              <div class="days">Thu</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                alt="Thu"
+                class="weather-img"
+              />
+              <div class="degree">25</div>
+            </div>
+            <div class="col">
+              <div class="days">Fri</div>
+
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+                alt="Fri"
+                class="weather-img"
+              />
+              <div class="degree">24</div>
+            </div>
+            <div class="col">
+              <div class="days"></div>
+              Sat<br />
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                alt="Sat"
+                class="weather-img"
+              />
+              <div class="degree">30</div>
+            </div>
+            <div class="col">
+              <div class="days"></div>
+              Sun<br />
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+                alt="Sun"
+                class="weather-img"
+              />
+              <div class="degree">33</div>
+            </div>
+            <div class="col">
+              <div class="days"></div>
+              Mon<br />
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                alt="Wed"
+                class="weather-img"
+              />
+              <div class="degree">33</div>
+            </div>
+          </div>
+        </div>
+
+        <script src="src/index.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
